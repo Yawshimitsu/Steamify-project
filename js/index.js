@@ -2,6 +2,10 @@ let cartCounter = 0;
 let cartSelector = document.getElementById("cart");
 
 cartSelector.textContent = cartCounter;
+
+if (document.URL.includes("games.html")) {
+  document.querySelector(".gaming-section").style.paddingTop = "116px";
+}
 // en fetch om prudukterna och rabatterna på hemsidan
 (function fetchData() {
   fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
