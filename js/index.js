@@ -1,5 +1,11 @@
 // en fetch om prudukterna och rabatterna på hemsidan
-function fetchData() {
+
+let cartCounter = 0;
+let cartSelector = document.getElementById("cart");
+
+cartSelector.textContent = cartCounter;
+
+(function fetchData() {
   fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
     .then((response) => {
       if (!response.ok) {
@@ -29,22 +35,33 @@ function fetchData() {
                             <h4 class="normalPrice"> ${
                               item && item.normalPrice
                             }$</h4>
+                            <button id="${
+                              item.internalName
+                            }" onclick="addToCart(${
+            item.internalName
+          })">Buy</button>
                         </div>
                     </div>
                 </div>
             `;
         })
         .join("");
-      console.log(data);
-      console.log(html);
       document.querySelector("#games").insertAdjacentHTML("afterbegin", html);
     })
     .catch((error) => {
       console.log("error", error);
     });
+})();
+
+function addToCart(item) {
+  console.log(item);
+  cartSelector.textContent = cartCounter++;
 }
 
-fetchData();
+function emptyCart() {
+  cartCounter = 0;
+  cartSelector.textContent = cartCounter;
+}
 
 // Mobila hamburgarbaren
 const burger = document
@@ -66,3 +83,19 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+(function fetchCities() {
+  fetch("https://avancera.app/cities/")
+    .then((response) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+})();
