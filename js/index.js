@@ -1,7 +1,9 @@
-let cartCounter = 0;
 let cartSelector = document.getElementById("cart");
 
-cartSelector.textContent = cartCounter;
+if (localStorage.getItem("cartCounter") === null) {
+  localStorage.setItem("cartCounter", 0);
+}
+cartSelector.textContent = localStorage.getItem("cartCounter");
 
 if (document.URL.includes("games.html")) {
   document.querySelector(".gaming-section").style.paddingTop = "116px";
@@ -67,13 +69,16 @@ if (document.URL.includes("index.html")) {
 })();
 // adding shopping cart
 function addToCart(item) {
-  console.log(item);
-  cartSelector.textContent = cartCounter++;
+  console.log(localStorage.getItem("cartCounter"));
+  let cartCounter = parseInt(localStorage.getItem("cartCounter"));
+  cartCounter++;
+  localStorage.setItem("cartCounter", cartCounter);
+  cartSelector.textContent = localStorage.getItem("cartCounter");
 }
 // adding empty cart
 function emptyCart() {
-  cartCounter = 0;
-  cartSelector.textContent = cartCounter;
+  localStorage.setItem("cartCounter", 0);
+  cartSelector.textContent = localStorage.getItem("cartCounter");
 }
 
 // Mobila hamburgarbaren
