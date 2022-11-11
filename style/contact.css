@@ -1,0 +1,129 @@
+section#contact {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background-image: url("../img/contact/contact_bg.jpg"), linear-gradient(-45deg, rgba(55, 45, 75, 1) 50%, rgba(45, 52, 71, 1) 100%);
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: lighten;
+}
+
+section#contact .contact_person_info {
+  margin: 20px;
+}
+
+section#contact .contact {
+  max-width: 50%;
+}
+
+section#contact .wrapper {
+  position: relative;
+  display: flex;
+  padding-top: 20vh;
+}
+
+section#contact .wrapper h4 {
+  color: rgba(250, 205, 95, 1);
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+section#contact .wrapper h5,
+section#contact .wrapper p {
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.5;
+}
+
+.contact_person {
+  display: flex;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.contact_person:last-child {
+  border-bottom: none;
+}
+
+.contact_person_img {
+  margin: auto;
+  flex: 0.5;
+}
+
+.contact_person_img img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.contact_person_info,
+.contact_company_questions {
+  margin: 20px 0;
+  flex: 1;
+}
+
+.contact_person_story {
+  margin: 15px 0;
+}
+
+.contact_company {
+  flex: 1;
+  padding-left: 80px;
+}
+
+#contact_google_maps {
+  position: relative;
+  overflow: hidden;
+  height: 75%;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+  section#contact p {
+    font-size: 20px;
+  }
+
+  .contact_person_img img {
+    height: 180px;
+    width: 180px;
+  }
+
+  .contact_person_info {
+    margin: 20px;
+  }
+
+  .contact_company {
+    padding-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  section#contact {
+    padding: 80px 0 0 0;
+  }
+
+  section#contact .wrapper {
+    display: block;
+    padding-top: 5vh;
+  }
+
+  section#contact .contact {
+    max-width: 100%;
+  }
+
+  .contact_person {
+    flex-direction: column;
+    padding-top: 5vh;
+  }
+
+  .contact_person:last-child {
+    border-bottom: 1px solid #f6f6f6;
+  }
+
+  .contact_company {
+    padding: 40px 0 0;
+  }
+
+  #contact_google_maps {
+    height: 500px;
+  }
+}
