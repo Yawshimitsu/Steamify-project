@@ -18,21 +18,26 @@ cartSelector.textContent = cartCounter;
           return `
                 <div class="tab_item">
                     <div class="tab_item_cap">
-                        <img class="tab_item_cap_img" src="${item && item.thumb
-            }" />
+                        <img class="tab_item_cap_img" src="${
+                          item && item.thumb
+                        }" />
                     </div>
                     <div class="wrap-content">
                         <div class="tab_item_content">
                             <h4> ${item && item.title}</h4>
                         </div>
                         <div class="pricing">
-                            <h4 class="dealrating"> ${item && item.dealRating
-            }%</h4>
-                            <h4 class="normalPrice"> ${item && item.normalPrice
-            }$</h4>
-                            <button id="${item.internalName
-            }" onclick="addToCart(${item.internalName
-            })">Buy</button>
+                            <h4 class="dealrating"> ${
+                              item && item.dealRating
+                            }%</h4>
+                            <h4 class="normalPrice"> ${
+                              item && item.normalPrice
+                            }$</h4>
+                            <button id="${
+                              item.internalName
+                            }" onclick="addToCart(${
+            item.internalName
+          })">Buy</button>
                         </div>
                     </div>
                 </div>
