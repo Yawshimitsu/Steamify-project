@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spel</title>
-    <link rel="stylesheet" href="style/main.css">
-  </head>
-  <body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Spel</title>
+	<link rel="stylesheet" href="style/main.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
 	<!-- Games -->
 	<div class="contact">
-        <!-- Navigation -->
+		<!-- Navigation -->
 		<div class="nav">
 			<div class="wrapper">
 				<a href="index.html">
@@ -21,6 +24,7 @@
 						<a href="index.html" class="button">Hem</a>
 						<a href="games.html" class="button">Spel</a>
 						<a href="contact.html" class="button">Kontakt</a>
+						<a href="cities.html" class="button">Cities</a>
 					</ul>
 				</div>
 				<div class="hamburger">
@@ -37,17 +41,20 @@
 					<a href="index.html" class="button">Hem</a>
 					<a href="games.html" class="button">Spel</a>
 					<a href="contact.html" class="button">Kontakt</a>
+					<a href="cities.html" class="button">Cities</a>
 				</div>
 			</div>
 		</div>
-        <section class="gaming-section">
+		<section class="gaming-section">
+			<div style="width: 500px; height: 500px">
+				<canvas id="priceChart" width="400" height="400"></canvas>
+			</div>
 			<div class="wrapper">
 				<h2 class="latestgame-title">Senaste spel</h2>
-				<div id="emptyCart" onclick="emptyCart()">Empty Shopping cart</div>
-				<div>IMG</div>
+				<button id="emptyCart" onclick="emptyCart()">Empty cart</button>
 				<div id="cart"></div>
 				<div id="games">
-					
+
 				</div>
 			</div>
 		</section>
@@ -63,5 +70,6 @@
 		</footer>
 	</div>
 	<script src="js/index.js"></script>
-  </body>
+</body>
+
 </html>

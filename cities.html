@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Streamify</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <!-- Cities -->
+    <div class="cities">
+        <!-- Navigation -->
+        <div class="nav">
+            <div class="wrapper">
+                <a href="index.html">
+                    <img class="logo" src="./img/logo/Steam-logo.png" alt="Logo" />
+                </a>
+                <div class="links">
+                    <ul>
+                        <a href="index.html" class="button">Hem</a>
+                        <a href="games.html" class="button">Spel</a>
+                        <a href="contact.html" class="button">Kontakt</a>
+                        <a href="cities.html" class="button">cities</a>
+                    </ul>
+                </div>
+                <div class="hamburger">
+                    <div id="nav-icon2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="menu_container">
+                    <a href="index.html" class="button">Hem</a>
+                    <a href="games.html" class="button">Spel</a>
+                    <a href="contact.html" class="button">Kontakt</a>
+                    <a href="cities.html" class="button">Cities</a>
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+        <header id="header">
+            <img class="graphic" src="./img/background/cities.jpg" alt="graphic" />
+        </header>
+        <div id="cart" style="display: none"></div>
+        <div id="addCity">
+            <h1>Lägg till stad</h1>
+            Input city name <input type="text" id="addCityInput">
+            <button onclick="addCity()">Lägg till!s</button>
+        </div>
+        <div id="renameCity">
+            <h1>Byt stad</h1>
+            <div class="listCities"></div>
+            New name <input type="text" id="renameCityInput">
+            <button onclick="renameCity()">Byt!</button>
+        </div>
+
+        <div id="deleteCity">
+            <h1>Ta bort</h1>
+            <div class="listCities"></div>
+            <button onclick="removeCity()">Ta bort!</button>
+        </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="wrapper">
+                <div class="links">
+                    <a href="#"><i class="material-icons">Email</i>Steamify@support.com</a>
+                    <a href="#"><i class="material-icons">Mobil</i>08-531 801 07</a>
+                    <a href="#"><i class="material-icons">Plats</i>Forvägen 13, 145 51 Stockholm</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
