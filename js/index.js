@@ -126,6 +126,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       document.querySelectorAll(".listCities").forEach((selector) => {
         selector.insertAdjacentHTML("afterbegin", html);
       });
+
+      document.querySelectorAll("#Regioner").forEach((selector) => {
+        selector.insertAdjacentHTML("afterbegin", html);
+      });
     })
     .catch((error) => {
       console.log("error", error);
