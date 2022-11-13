@@ -46,26 +46,34 @@
         </div>
         <!-- Header -->
         <header id="header">
-            <img class="graphic" src="./img/background/cities.jpg" alt="graphic" />
-        </header>
-        <div id="cart" style="display: none"></div>
-        <div id="addCity">
-            <h1>Lägg till stad</h1>
-            Input city name <input type="text" id="addCityInput">
-            <button onclick="addCity()">Lägg till!s</button>
-        </div>
-        <div id="renameCity">
-            <h1>Byt stad</h1>
-            <div class="listCities"></div>
-            New name <input type="text" id="renameCityInput">
-            <button onclick="renameCity()">Byt!</button>
-        </div>
+            <div class="citiesSection">
 
-        <div id="deleteCity">
-            <h1>Ta bort</h1>
-            <div class="listCities"></div>
-            <button onclick="removeCity()">Ta bort!</button>
-        </div>
+                <div class="backgroundCity">
+    
+                    <img class="graphic" src="./img/background/cities.jpg" alt="graphic" />
+                </div>
+                <div class="citiesForm">
+    
+                    <div id="addCity">
+                        <h1>Lägg till stad</h1>
+                        Input city name <input type="text" id="addCityInput">
+                        <button onclick="addCity()">Lägg till!s</button>
+                    </div>
+                    <div id="renameCity">
+                        <h1>Byt stad</h1>
+                        <div class="listCities"></div>
+                        New name <input type="text" id="renameCityInput">
+                        <button onclick="renameCity()">Byt!</button>
+                    </div>
+            
+                    <div id="deleteCity">
+                        <h1>Ta bort</h1>
+                        <div class="listCities"></div>
+                        <button onclick="removeCity()">Ta bort!</button>
+                    </div>
+                </div>
+            </div>
+        </header>
         <!-- Footer -->
         <footer id="footer">
             <div class="wrapper">
