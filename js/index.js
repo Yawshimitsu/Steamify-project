@@ -1,3 +1,4 @@
+// cart
 if (localStorage.getItem("cartCounter") === null) {
   localStorage.setItem("cartCounter", 0);
 }
@@ -8,14 +9,14 @@ if (
   let cartSelector = document.getElementById("cart");
   cartSelector.textContent = localStorage.getItem("cartCounter");
 
-  // adding shopping cart
+  // add to cart
   function addToCart(item) {
     let cartCounter = parseInt(localStorage.getItem("cartCounter"));
     cartCounter++;
     localStorage.setItem("cartCounter", cartCounter);
     cartSelector.textContent = localStorage.getItem("cartCounter");
   }
-  // adding empty cart
+  // Empty cart
   function emptyCart() {
     localStorage.setItem("cartCounter", 0);
     cartSelector.textContent = localStorage.getItem("cartCounter");
@@ -25,7 +26,7 @@ if (
 if (document.URL.includes("games.html")) {
   document.querySelector(".gaming-section").style.paddingTop = "116px";
 }
-
+// Smooth scroll on home page all games button
 if (document.URL.includes("index.html")) {
   document
     .getElementById("headerButton")
@@ -36,7 +37,7 @@ if (document.URL.includes("index.html")) {
       });
     });
 }
-// en fetch om prudukterna och rabatterna på hemsidan
+// Fetch for discounts and games.
 (function fetchData() {
   fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
     .then((response) => {
@@ -82,7 +83,7 @@ if (document.URL.includes("index.html")) {
     });
 })();
 
-// Mobila hamburgarbaren
+// Mobile hamburger
 const burger = document
   .querySelector(".hamburger")
   .addEventListener("click", function () {
@@ -93,17 +94,8 @@ const burger = document
     nav.classList.toggle("open");
   });
 
-// Smooth scroll till spel sektionen
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
 
-// Cities tabort, lägg till och ändra namn
+// Cities change add and delete
 (function fetchCities() {
   fetch("https://avancera.app/cities/")
     .then((response) => {
@@ -209,7 +201,7 @@ function removeCity() {
       console.log("error", error);
     });
 }
-
+// Chart Shows pricepool and how many games there is in that price
 function createChart(games) {
   const element = document.getElementById("priceChart");
   if (!element) {
